@@ -24,3 +24,7 @@ $ go get github.com/huacnlee/micro-web-simple && micro-web-simple
 4. 通过 Micro Web Proxy 的代理，访问应用的页面
 
 http://localhost:8082/simple/
+
+> simple 这点原理是，main.go 里面注册应用的服务名称是 `go.micro.web.simple`，micro web 会自动将这类服务变为一个路径 /<service>
+
+将会通过 micro web proxy 访问到应用服务器的相应页面。
